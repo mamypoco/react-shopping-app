@@ -1,19 +1,23 @@
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
 import "./shop.css";
+import { Container, Row, Col } from "reactstrap";
+// import Col from "react-bootstrap/Col";
+// import Row from "react-bootstrap/Row";
 
 export const Shop = () => {
    return (
-      <div className="shop">
-         <div className="shoptTitle">
+      <Container>
+         <div className="shopTitle">
             <h1>Mami's Gold Bakery</h1>
          </div>
-         <div className="products">
+         <Row className="products">
             {PRODUCTS.map((product) => (
-               <Product data={product} />
-               //PRODUCTSのデータを一つ一つマップして、Productのdataにproductを入れて表示させよ
+               <Col lg="4" sm="6" xs="12">
+                  <Product data={product} />
+               </Col>
             ))}
-         </div>
-      </div>
+         </Row>
+      </Container>
    );
 };
