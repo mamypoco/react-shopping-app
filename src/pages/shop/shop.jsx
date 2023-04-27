@@ -13,7 +13,7 @@ export const Shop = () => {
          </div>
          <Row className="products">
             {PRODUCTS.map((product) => (
-               <Col lg="4" sm="6" xs="12">
+               <Col lg="4" sm="12">
                   <Product data={product} />
                </Col>
             ))}
